@@ -13,4 +13,23 @@ package edu.jalc.inclass.cocacola.recipe.store;
 		match, throw an exception.
  */
 public class SecretRecipeStore {
+
+   private static SecretRecipeStore secretRecipeStore;
+
+	private SecretRecipeStore(){
+		// purposely hidden from consumption
+	}
+
+	public static SecretRecipeStore getInstance(){
+		if(secretRecipeStore == null) secretRecipeStore = new SecretRecipeStore();
+		return secretRecipeStore;
+   }
+   //public void SecretRecipeStore addRecipe(Recipe recipe,Employee employee)throws Exception{
+      //this.store.put(recipe, employee.getPinNumber());
+      //return this;
+   
+   public void SecretRecipeStore getRecipe(Recipe recipe){
+      secretRecipeStore.getRecipe().pinNumber(employee.getPinNumber());
+   
+   }
 }
